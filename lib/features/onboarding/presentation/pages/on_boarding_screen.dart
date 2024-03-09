@@ -4,7 +4,6 @@ import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:cupertino_onboarding/cupertino_onboarding.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnboardingOverview extends StatelessWidget {
   const OnboardingOverview({

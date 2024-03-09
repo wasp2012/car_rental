@@ -6,25 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-// class CustomNavBar extends StatelessWidget {
-//   const CustomNavBar({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return BlocBuilder<NavigationCubit, NavigationState>(
-//       builder: (context, state) {
-//         return BottomNavigationBar(
-//           currentIndex: state.index,
-//           items: NavItems.navBarItems,
-//           selectedItemColor: ColorsManager.bgColor,
-//           unselectedItemColor: ColorsManager.bgColor.withOpacity(0.25),
-//           onTap: context.read<NavigationCubit>().setIndex,
-//         );
-//       },
-//     );
-//   }
-// }
-
 class CustomNavbar extends StatelessWidget {
   const CustomNavbar({super.key});
 
