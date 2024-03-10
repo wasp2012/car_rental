@@ -14,9 +14,9 @@ class CustomNavbar extends StatelessWidget {
     return BlocBuilder<NavigationCubit, NavigationState>(
       builder: (context, state) {
         return Container(
-          padding: EdgeInsets.only(bottom: 20.h),
+          // padding: EdgeInsets.only(bottom: 20.h),
           child: DotNavigationBar(
-            paddingR: EdgeInsets.symmetric(vertical: 10.h, horizontal: 20.w),
+            paddingR: EdgeInsets.symmetric(vertical: 5.h, horizontal: 10.w),
             marginR: EdgeInsets.symmetric(vertical: 0.h, horizontal: 5.w),
             splashBorderRadius: 50,
             backgroundColor: ColorsManager.mainColor,

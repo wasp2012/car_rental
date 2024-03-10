@@ -13,6 +13,7 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         extendBody: true,
+       
         bottomNavigationBar: const CustomNavbar(),
         body: BlocBuilder<NavigationCubit, NavigationState>(
           builder: (context, state) {
