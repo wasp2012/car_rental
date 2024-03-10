@@ -20,6 +20,13 @@ class HomeWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Text(
+              'Location',
+              style: TextStyles.font16BlackRegular.copyWith(
+                  color: ColorsManager.gray,
+                  fontWeight: FontWeightHelper.regular,
+                  fontFamily: 'droid'),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
