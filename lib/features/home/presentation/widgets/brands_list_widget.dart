@@ -22,7 +22,7 @@ class BrandListViewWidget extends StatelessWidget {
               fontWeight: FontWeightHelper.medium,
               fontFamily: 'droid'),
         ),
-        verticalSpace(16),
+        verticalSpace(8),
         SizedBox(
           height: 55.h,
           child: ListView.builder(
@@ -52,7 +52,7 @@ class BrandListViewWidget extends StatelessWidget {
                         color: index == 0 ? Colors.white : null,
                       ),
               );
-            },     
+            },
             itemCount: 8,
             shrinkWrap: true,
             scrollDirection: Axis.horizontal,

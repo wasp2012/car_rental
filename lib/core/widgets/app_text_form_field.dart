@@ -15,6 +15,7 @@ class AppTextFormField extends StatelessWidget {
     required this.hintText,
     this.isObscureText,
     this.suffixIcon,
+    this.prefixIcon,
     this.backgroundColor,
     this.controller,
     this.validator,
@@ -29,6 +30,8 @@ class AppTextFormField extends StatelessWidget {
   final String hintText;
   final bool? isObscureText;
   final Widget? suffixIcon;
+  final Widget? prefixIcon;
+
   final Color? backgroundColor;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
@@ -38,6 +41,8 @@ class AppTextFormField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTapOutside: (pointerDownEvent) =>
+          FocusManager.instance.primaryFocus?.unfocus(),
       controller: controller,
       keyboardType: keyboard,
       decoration: InputDecoration(
@@ -79,6 +84,7 @@ class AppTextFormField extends StatelessWidget {
         hintStyle: hintStyle ?? TextStyles.font14GrayRegular,
         hintText: hintText,
         suffixIcon: suffixIcon,
+        prefixIcon: prefixIcon,
         filled: true,
         fillColor: backgroundColor ?? ColorsManager.moreLightGray,
       ),
