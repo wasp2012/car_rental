@@ -1,4 +1,3 @@
-import 'package:car_rental/core/helpers/spacing.dart';
 import 'package:car_rental/features/car_details/presentation/widgets/book_now_widget.dart';
 import 'package:car_rental/features/car_details/presentation/widgets/car_details_header_widget.dart';
 import 'package:car_rental/features/car_details/presentation/widgets/car_details_widget.dart';
@@ -19,16 +18,16 @@ class CarDetailsScreen extends StatelessWidget {
 }
 
 Widget normalDetailsScreen() {
-  return SingleChildScrollView(
+  return const SingleChildScrollView(
     child: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const CarDetailsHeaderWidget(),
-        verticalSpace(8),
-        const CarDetailsWidget(),
-        verticalSpace(8),
-        const CarSpecsWidget(),
-        const BookNowWidget(),
+        CarDetailsHeaderWidget(),
+        // verticalSpace(8),
+        CarDetailsWidget(),
+        // verticalSpace(8),
+        CarSpecsWidget(),
+        BookNowWidget(),
       ],
     ),
   );

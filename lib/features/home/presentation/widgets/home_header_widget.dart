@@ -4,7 +4,7 @@ import 'package:car_rental/core/theming/font_weight_helper.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomeHeaderWidget extends StatelessWidget {
   const HomeHeaderWidget({super.key});
@@ -32,10 +32,10 @@ class HomeHeaderWidget extends StatelessWidget {
             ),
           ],
         ),
-        horizontalSpace(150),
+        horizontalSpace(50),
         Container(
-          width: 40.0.w,
-          height: 40.0.h,
+          width: 0.3.w,
+          height: 0.3.h,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,
@@ -45,10 +45,10 @@ class HomeHeaderWidget extends StatelessWidget {
           ),
           child: const Icon(Icons.notifications_active_outlined),
         ),
-        horizontalSpace(18),
+        horizontalSpace(14),
         Container(
-          width: 40.0.w,
-          height: 40.0.h,
+          width: 0.3.w,
+          height: 0.3.h,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,

@@ -3,7 +3,7 @@ import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/widgets/app_text_form_field.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomeSearchBar extends StatelessWidget {
   const HomeSearchBar({super.key});
@@ -15,13 +15,13 @@ class HomeSearchBar extends StatelessWidget {
         Expanded(
           child: AppTextFormField(
             contentPadding: EdgeInsets.symmetric(
-              horizontal: 15.w,
-              vertical: 15.h,
+              horizontal: 5.w,
+              vertical: 2.h,
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50.0),
-              borderSide: const BorderSide(
-                  color: ColorsManager.lightGray, width: 1.3),
+              borderSide:
+                  const BorderSide(color: ColorsManager.lightGray, width: 1.3),
             ),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(50.0),
@@ -40,8 +40,8 @@ class HomeSearchBar extends StatelessWidget {
         ),
         horizontalSpace(10),
         Container(
-          width: 55.0.w,
-          height: 53.0.h,
+          width: 12.0.w,
+          height: 12.0.h,
           decoration: BoxDecoration(
             color: ColorsManager.mainColor,
             border: Border.all(

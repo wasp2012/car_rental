@@ -16,6 +16,10 @@
     "book_now":"Book Now",
     "overview":"OVERVIEW",
     "read_more":"Read More",
-    "specification":"SPECIFICATIONS"
+    "specification":"SPECIFICATIONS",
+    "continue":"Continue",
+    
+    "choose_lang":"Choose your language",
+    "select_your_fav":"Select your preferred language to use Majestic Renting"
 
 }

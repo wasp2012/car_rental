@@ -1,10 +1,9 @@
-import 'package:car_rental/core/helpers/spacing.dart';
 import 'package:car_rental/features/home/presentation/widgets/available_cars_list_widget.dart';
 import 'package:car_rental/features/home/presentation/widgets/brands_list_widget.dart';
 import 'package:car_rental/features/home/presentation/widgets/home_header_widget.dart';
 import 'package:car_rental/features/home/presentation/widgets/home_search_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class HomeWidget extends StatelessWidget {
   const HomeWidget({
@@ -14,18 +13,15 @@ class HomeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(16.h),
-      child: SingleChildScrollView(
+      padding: EdgeInsets.all(1.5.h),
+      child: const SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const HomeHeaderWidget(),
-            verticalSpace(20),
-            const HomeSearchBar(),
-            verticalSpace(10),
-            const BrandListViewWidget(),
-            verticalSpace(20),
-            const AvailableCarsListWidget()
+            HomeHeaderWidget(),
+            HomeSearchBar(),
+            BrandListViewWidget(),
+            AvailableCarsListWidget()
           ],
         ),
       ),

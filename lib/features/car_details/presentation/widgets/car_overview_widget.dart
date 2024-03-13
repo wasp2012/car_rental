@@ -3,7 +3,7 @@ import 'package:car_rental/core/theming/font_weight_helper.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CarOverviewWidget extends StatelessWidget {
   const CarOverviewWidget({super.key});
@@ -16,7 +16,7 @@ class CarOverviewWidget extends StatelessWidget {
         Text(
           'overview'.tr(),
           style: TextStyles.font24BlueExtraBold.copyWith(
-            fontSize: 18.sp,
+            fontSize: 20.sp,
             fontWeight: FontWeightHelper.semiBold,
           ),
         ),
@@ -28,6 +28,8 @@ class CarOverviewWidget extends StatelessWidget {
                 text:
                     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ',
                 style: TextStyles.font15OrangeMedium.copyWith(
+                  letterSpacing: 1.1,
+                  height: 0.15.h,
                   color: ColorsManager.gray,
                 ),
               ),

@@ -1,9 +1,11 @@
+import 'package:car_rental/core/helpers/extensions.dart';
 import 'package:car_rental/core/helpers/spacing.dart';
+import 'package:car_rental/core/routing/routes.dart';
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SettingsListWidget extends StatelessWidget {
   const SettingsListWidget({super.key});
@@ -13,7 +15,9 @@ class SettingsListWidget extends StatelessWidget {
     return Column(
       children: [
         SettingsItemWidget(
-          action: () {},
+          action: () {
+            context.pushNamed(Routes.languageScreen);
+          },
           text: 'language'.tr(),
           icon: Icons.language_outlined,
         ),
@@ -53,33 +57,42 @@ class SettingsListWidget extends StatelessWidget {
 }
 
 class SettingsItemWidget extends StatelessWidget {
-  const SettingsItemWidget({
-    super.key,
-    required this.text,
-    required this.action,
-    required this.icon,
-  });
+  const SettingsItemWidget(
+      {super.key,
+      required this.text,
+      required this.action,
+      required this.icon,
+      this.borderRadius,
+      this.isBorderEnabled = false});
   final String text;
   final Function() action;
   final IconData icon;
+  final bool isBorderEnabled;
+  final double? borderRadius;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: action,
       child: Container(
-        padding: EdgeInsets.all(14.h),
-        margin: EdgeInsets.symmetric(vertical: 8.h),
+        padding: EdgeInsets.symmetric(vertical: 0.3.h, horizontal: 6.w),
+        margin: EdgeInsets.symmetric(vertical: 1.h),
         width: double.infinity,
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(40.0),
+          border: isBorderEnabled
+              ? Border.all(
+                  width: 2,
+                  color: ColorsManager.mainOrange,
+                )
+              : null,
+          borderRadius: BorderRadius.circular(borderRadius ?? 40.0),
         ),
         child: Row(
           children: [
             Container(
-              width: 40.0.w,
-              height: 40.0.h,
+              width: 9.0.w,
+              height: 9.0.h,
               decoration: BoxDecoration(
                 color: ColorsManager.bgColor,
                 border: Border.all(
@@ -93,10 +106,10 @@ class SettingsItemWidget extends StatelessWidget {
                 color: ColorsManager.mainColor,
               ),
             ),
-            horizontalSpace(10),
+            horizontalSpace(4),
             Text(
               text,
-              style: TextStyles.font16WhiteMedium.copyWith(fontSize: 15),
+              style: TextStyles.font16WhiteMedium,
             )
           ],
         ),

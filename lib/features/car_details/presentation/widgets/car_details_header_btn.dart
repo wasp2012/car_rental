@@ -1,7 +1,7 @@
 import 'package:car_rental/core/helpers/extensions.dart';
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CarDetailsHeaderBtn extends StatelessWidget {
   const CarDetailsHeaderBtn({
@@ -14,8 +14,8 @@ class CarDetailsHeaderBtn extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: 45.0.w,
-          height: 45.0.h,
+          width: 12.0.w,
+          height: 12.0.h,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,
@@ -29,8 +29,8 @@ class CarDetailsHeaderBtn extends StatelessWidget {
           ),
         ),
         Container(
-          width: 45.0.w,
-          height: 45.0.h,
+          width: 12.0.w,
+          height: 12.0.h,
           decoration: BoxDecoration(
             border: Border.all(
               width: 1,

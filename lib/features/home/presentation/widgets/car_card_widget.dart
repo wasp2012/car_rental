@@ -3,7 +3,7 @@ import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/font_weight_helper.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class CarCardWidget extends StatelessWidget {
   const CarCardWidget({super.key});
@@ -11,10 +11,12 @@ class CarCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.all(7),
+      margin: EdgeInsets.symmetric(
+        vertical: 2.h,
+      ),
       elevation: 10,
       child: Container(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.all(1.5.h),
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(10),
@@ -24,8 +26,8 @@ class CarCardWidget extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: Container(
-                width: 30.0.w,
-                height: 30.0.h,
+                width: 11.0.w,
+                height: 6.0.h,
                 decoration: BoxDecoration(
                   border: Border.all(
                     width: 1,
@@ -36,7 +38,7 @@ class CarCardWidget extends StatelessWidget {
                 child: const Icon(
                   Icons.favorite_border_outlined,
                   size: 20,
-                  color:  Color.fromARGB(255, 165, 165, 165),
+                  color: Color.fromARGB(255, 165, 165, 165),
                 ),
               ),
             ),
@@ -44,28 +46,30 @@ class CarCardWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset('assets/images/car_list.png'),
-                verticalSpace(16),
+                // verticalSpace(16),
                 Text(
                   '840i Convertible',
-                  style: TextStyles.font16WhiteSemiBold,
+                  style: TextStyles.font16WhiteSemiBold
+                      .copyWith(fontWeight: FontWeightHelper.bold),
                 ),
-                verticalSpace(8),
+                // verticalSpace(8),
                 Row(
                   children: [
                     const Icon(
                       Icons.star,
                       color: Color(0xFFEEC533),
                     ),
-                    horizontalSpace(3),
+                    horizontalSpace(1.5),
                     Text(
                       '4.9',
                       style: TextStyles.font13DarkBlueMedium.copyWith(
                           fontSize: 16, fontWeight: FontWeightHelper.bold),
                     ),
-                    horizontalSpace(6),
+                    horizontalSpace(3),
                     Text(
                       '(120 Reviews)',
                       style: TextStyles.font13DarkBlueMedium.copyWith(
+                        fontSize: 15.sp,
                         decoration: TextDecoration.underline,
                         decorationColor:
                             const Color.fromARGB(255, 165, 165, 165),
@@ -73,7 +77,7 @@ class CarCardWidget extends StatelessWidget {
                         color: const Color.fromARGB(255, 165, 165, 165),
                       ),
                     ),
-                    horizontalSpace(70),
+                    horizontalSpace(28),
                     RichText(
                       textAlign: TextAlign.center,
                       text: TextSpan(
@@ -99,7 +103,7 @@ class CarCardWidget extends StatelessWidget {
                 ),
               ],
             ),
-            verticalSpace(10),
+            verticalSpace(2),
           ],
         ),
       ),

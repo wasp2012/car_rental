@@ -4,6 +4,8 @@ import 'package:car_rental/features/car_details/presentation/pages/car_details_s
 import 'package:car_rental/features/home/presentation/cubit/navigation_cubit.dart';
 import 'package:car_rental/features/home/presentation/pages/home_screen.dart';
 import 'package:car_rental/features/onboarding/presentation/pages/on_boarding_screen.dart';
+import 'package:car_rental/features/settings/presentation/cubit/settings_cubit.dart';
+import 'package:car_rental/features/settings/presentation/widgets/settings_items/language_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -24,6 +26,13 @@ class AppRouter {
       case Routes.carDetailsScreen:
         return MaterialPageRoute(
           builder: (context) => const CarDetailsScreen(),
+        );
+      case Routes.languageScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<SettingsCubit>(),
+            child: const LanguageScreen(),
+          ),
         );
       default:
         return MaterialPageRoute(

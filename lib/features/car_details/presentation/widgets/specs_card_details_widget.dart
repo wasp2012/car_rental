@@ -1,7 +1,7 @@
 import 'package:car_rental/core/helpers/spacing.dart';
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SpecsCardDetailsWidget extends StatelessWidget {
   const SpecsCardDetailsWidget({
@@ -13,8 +13,8 @@ class SpecsCardDetailsWidget extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 45.0.w,
-          height: 45.0.h,
+          width: 12.0.w,
+          height: 12.0.h,
           decoration: BoxDecoration(
             color: ColorsManager.mediumGray,
             border: Border.all(
@@ -31,7 +31,7 @@ class SpecsCardDetailsWidget extends StatelessWidget {
             onPressed: () {},
           ),
         ),
-        horizontalSpace(5),
+        horizontalSpace(2),
         const Text('5 Seats'),
       ],
     );

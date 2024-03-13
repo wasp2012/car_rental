@@ -5,7 +5,7 @@ import 'package:car_rental/features/settings/presentation/widgets/info_card_widg
 import 'package:car_rental/features/settings/presentation/widgets/settings_list_widget.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -16,28 +16,24 @@ class SettingsScreen extends StatelessWidget {
       backgroundColor: ColorsManager.bgColor,
       extendBody: true,
       body: Container(
-        padding: EdgeInsets.all(16.h),
+        padding: EdgeInsets.symmetric(horizontal: 3.w, vertical: 1.5.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                // width: 30.0.w,
-                height: 30.0.h,
-                child: Text(
-                  'personal_info'.tr(),
-                  style: TextStyles.font16WhiteSemiBold,
-                ),
+              Text(
+                'personal_info'.tr(),
+                style: TextStyles.font16WhiteSemiBold,
               ),
-              verticalSpace(20),
+              // verticalSpace(20),
               const InfoCardWidget(),
-              verticalSpace(10),
+              // verticalSpace(1),
               const Divider(
                 color: ColorsManager.lightGray,
               ),
-              verticalSpace(10),
+              // verticalSpace(10),
               const SettingsListWidget(),
-              verticalSpace(60),
+              verticalSpace(10),
             ],
           ),
         ),

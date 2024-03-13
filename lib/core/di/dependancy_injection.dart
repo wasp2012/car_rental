@@ -1,6 +1,7 @@
 import 'package:car_rental/core/helpers/local_storage.dart';
 import 'package:car_rental/core/networking/dio_factory.dart';
 import 'package:car_rental/features/home/presentation/cubit/navigation_cubit.dart';
+import 'package:car_rental/features/settings/presentation/cubit/settings_cubit.dart';
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
@@ -14,4 +15,5 @@ Future<void> setupGetIt() async {
   await storage.sharedPrefsInit();
   getIt.registerSingleton(storage);
   getIt.registerFactory<NavigationCubit>(() => NavigationCubit());
+  getIt.registerFactory<SettingsCubit>(() => SettingsCubit(storage));
 }
