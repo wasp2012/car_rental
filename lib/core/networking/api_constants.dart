@@ -11,6 +11,8 @@ class ApiConstants {
 
   static const String tokenKey = 'tokenKey';
   static const String customerId = 'customerId';
+  
+  static const String lang = 'language';
 }
 
 class ApiErrors {

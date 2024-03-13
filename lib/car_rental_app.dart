@@ -1,6 +1,7 @@
 import 'package:car_rental/core/routing/app_router.dart';
 import 'package:car_rental/core/routing/routes.dart';
 import 'package:car_rental/core/theming/colors.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -18,6 +19,9 @@ class CarRentalApp extends StatelessWidget {
           primaryColor: ColorsManager.mainOrange,
           scaffoldBackgroundColor: ColorsManager.bgColor,
         ),
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
         debugShowCheckedModeBanner: false,
         title: 'Car Rental App',
         initialRoute: Routes.onBoardingScreen,

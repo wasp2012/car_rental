@@ -10,7 +10,8 @@ Future<void> setupGetIt() async {
   //Dio $ ApiService
 
   Dio dio = DioFactory.getDio();
-  LocalStorage storage = LocalStorage();
-
+  final storage = LocalStorage();
+  await storage.sharedPrefsInit();
+  getIt.registerSingleton(storage);
   getIt.registerFactory<NavigationCubit>(() => NavigationCubit());
 }

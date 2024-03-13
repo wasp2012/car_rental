@@ -1,6 +1,7 @@
 import 'package:car_rental/core/helpers/spacing.dart';
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/widgets/app_text_form_field.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -29,7 +30,7 @@ class HomeSearchBar extends StatelessWidget {
                 width: 1.3,
               ),
             ),
-            hintText: 'Search ',
+            hintText: 'search'.tr(),
             prefixIcon: const Icon(
               Icons.search,
               color: ColorsManager.gray,
