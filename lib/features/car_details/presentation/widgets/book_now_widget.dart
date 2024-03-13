@@ -1,5 +1,6 @@
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/styles.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 
@@ -49,7 +50,7 @@ class BookNowWidget extends StatelessWidget {
             ),
             onPressed: () {},
             child: Text(
-              'Book Now',
+              'book_now'.tr(),
               style: TextStyles.font16WhiteSemiBold.copyWith(
                 color: ColorsManager.bgColor,
               ),

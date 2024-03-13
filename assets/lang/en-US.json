@@ -4,6 +4,18 @@
     "all":"All",
     "location":"Location",
     "search":"Search",
-    "search_here":"Search Here"
+    "search_here":"Search Here",
+    "personal_info":"Personal Info",
+    "language":"Language",
+    "profile":"Profile",
+    "fAQs":"FAQs",
+    "ratings_reviews":"Ratings & Reviews",
+    "privacy_policy":"Privacy Policy",
+    "renting_history":"Renting History",
+    "logout":"Logout",
+    "book_now":"Book Now",
+    "overview":"OVERVIEW",
+    "read_more":"Read More",
+    "specification":"SPECIFICATIONS"
 
 }

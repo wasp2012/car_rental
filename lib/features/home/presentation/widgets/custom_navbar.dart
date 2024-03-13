@@ -22,7 +22,7 @@ class CustomNavbar extends StatelessWidget {
             backgroundColor: ColorsManager.mainColor,
             currentIndex: state.index,
             onTap: context.read<NavigationCubit>().setIndex,
-            dotIndicatorColor: ColorsManager.bgColor,
+            dotIndicatorColor: ColorsManager.mainColor,
             items: NavItems.navBarItems,
           ),
         );

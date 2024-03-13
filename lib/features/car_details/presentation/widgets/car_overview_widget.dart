@@ -1,6 +1,7 @@
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/font_weight_helper.dart';
 import 'package:car_rental/core/theming/styles.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,7 +14,7 @@ class CarOverviewWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'OVERVIEW',
+          'overview'.tr(),
           style: TextStyles.font24BlueExtraBold.copyWith(
             fontSize: 18.sp,
             fontWeight: FontWeightHelper.semiBold,
@@ -31,7 +32,7 @@ class CarOverviewWidget extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                text: ' Read More',
+                text: ' ${'read_more'.tr()}',
                 style: TextStyles.font16WhiteSemiBold.copyWith(
                   fontSize: 15.sp,
                   decoration: TextDecoration.underline,

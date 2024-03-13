@@ -4,5 +4,17 @@
     "all":"الكل",
     "location":"العنوان",
     "search":"البحث",
-    "search_here":"البحث هنا"
+    "search_here":"البحث هنا",
+    "personal_info":"البيانات الشخصية",
+    "language":"اللغة",
+    "profile":"الشخصية",
+    "fAQs":"الاسئلة الشائعة",
+    "ratings_reviews":" التقييم و الاراء",
+    "privacy_policy":"سياسات الخصوصية",
+    "renting_history":"تاريخ الإيجار",
+    "logout":"تسجيل خروج",
+    "book_now":"اطلب الان",
+    "overview":"نظرة عامة",
+    "read_more":"المزيد",
+    "specification":"المميزات"
 }

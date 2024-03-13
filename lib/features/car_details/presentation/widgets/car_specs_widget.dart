@@ -1,6 +1,7 @@
 import 'package:car_rental/core/theming/font_weight_helper.dart';
 import 'package:car_rental/core/theming/styles.dart';
 import 'package:car_rental/features/car_details/presentation/widgets/specs_card_details_widget.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class CarSpecsWidget extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'SPECIFICATIONS',
+            'specification'.tr(),
             style: TextStyles.font24BlueExtraBold.copyWith(
               fontSize: 18.sp,
               fontWeight: FontWeightHelper.semiBold,

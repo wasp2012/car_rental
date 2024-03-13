@@ -1,6 +1,7 @@
 import 'package:car_rental/core/helpers/spacing.dart';
 import 'package:car_rental/core/theming/colors.dart';
 import 'package:car_rental/core/theming/styles.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -13,37 +14,37 @@ class SettingsListWidget extends StatelessWidget {
       children: [
         SettingsItemWidget(
           action: () {},
-          text: 'Language',
+          text: 'language'.tr(),
           icon: Icons.language_outlined,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'Profile',
+          text: 'profile'.tr(),
           icon: Icons.person,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'FAQs',
+          text: 'fAQs'.tr(),
           icon: Icons.favorite,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'Ratings & Reviews',
+          text: 'ratings_reviews'.tr(),
           icon: Icons.star,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'Privacy & Policy',
+          text: 'privacy_policy'.tr(),
           icon: Icons.privacy_tip,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'Renting History',
+          text: 'renting_history'.tr(),
           icon: Icons.history,
         ),
         SettingsItemWidget(
           action: () {},
-          text: 'Logout',
+          text: 'logout'.tr(),
           icon: Icons.logout,
         ),
       ],
