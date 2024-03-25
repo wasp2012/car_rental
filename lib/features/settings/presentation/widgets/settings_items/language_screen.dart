@@ -22,7 +22,9 @@ class _LanguageScreenState extends State<LanguageScreen> {
   @override
   void initState() {
     super.initState();
-    context.read<SettingsCubit>().initSelectedLang();
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await context.read<SettingsCubit>().initSelectedLang();
+    });
   }
 
   @override

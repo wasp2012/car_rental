@@ -10,7 +10,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await setupGetIt();
   await EasyLocalization.ensureInitialized();
-  Future.wait([]);
+
   Locale startLocal = const Locale('en', 'US');
   bool containLang = await getIt<LocalStorage>().containKey(ApiConstants.lang);
   if (containLang) {

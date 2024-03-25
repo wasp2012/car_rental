@@ -13,19 +13,17 @@ class CustomNavbar extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<NavigationCubit, NavigationState>(
       builder: (context, state) {
-        return Expanded(
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 1.5.h),
-            child: DotNavigationBar(
-              marginR: EdgeInsets.symmetric(vertical: 0.h, horizontal: 4.w),
-              paddingR: EdgeInsets.symmetric(vertical: 0.6.h, horizontal: 2.w),
-              splashBorderRadius: 30,
-              backgroundColor: ColorsManager.mainColor,
-              currentIndex: state.index,
-              onTap: context.read<NavigationCubit>().setIndex,
-              dotIndicatorColor: ColorsManager.mainColor,
-              items: NavItems.navBarItems,
-            ),
+        return Container(
+          padding: EdgeInsets.symmetric(vertical: 1.5.h),
+          child: DotNavigationBar(
+            marginR: EdgeInsets.symmetric(vertical: 0.h, horizontal: 4.w),
+            paddingR: EdgeInsets.symmetric(vertical: 0.6.h, horizontal: 2.w),
+            splashBorderRadius: 30,
+            backgroundColor: ColorsManager.mainColor,
+            currentIndex: state.index,
+            onTap: context.read<NavigationCubit>().setIndex,
+            dotIndicatorColor: ColorsManager.mainColor,
+            items: NavItems.navBarItems,
           ),
         );
       },
